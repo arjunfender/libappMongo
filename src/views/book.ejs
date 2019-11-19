@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <title>Library</title>
+</head>
+
+<body  data-spy="scroll" data-target="#navbarResponsive" style="background-color: rgb(196, 196, 196);">
+        <nav class="navbar navbar-dark nav-custom li-text  bottom-marg navbar-expand-lg " >
+          <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">   -->
+                <span class="navbar-toggler-icon"> </span>
+              
+              </button>
+              
+                <div class=" li-text collapse navbar-collapse" id="navbarResponive">
+                  <ul class="nav navbar-nav li-text">
+                      <!-- ///*****changing navigational bar from HTML to Ejs */ -->
+                      <%for(var i=0;i<nav.length;i++){%>
+                          <a href="<%=nav[i].link%>"> <%=nav[i].title%>&nbsp;&nbsp;&nbsp;</a>  
+                       <%}%> 
+                   
+                  </ul>
+                </div>
+                
+              
+              </nav>
+
+              <tr>
+                <div class="head-under " >
+                        <h1 class="lib-text"><%=title%></h1>
+                       
+                </div>
+                <div class="card-continer continer" id="card-cont">
+                    
+                      <div class="card-content ">
+                          <img src="/images/<%=book.image%>"  width="100px" height="100px">
+                          <p class="book-heading">Book Name:&nbsp;&nbsp;<%=book.title%></p>
+                          <p class="book-details">Author:&nbsp;&nbsp;<%=book.author%></p>
+                          <p class="book-details">Genere:&nbsp;&nbsp;<%=book.genere%></p>
+                          <p class="book-details">Content:&nbsp;&nbsp;<%=book.content%></p>
+                    
+                
+                </div>
+                </div>
+                 
+                      
+                      
+                      </table>  
+
+                   </div>
+                
+                   
+              </div>
+  </body>
+</html>

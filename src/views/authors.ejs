@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <title>AuthorsList</title>
+</head>
+
+<body  data-spy="scroll" data-target="#navbarResponsive" style="background-color: rgb(196, 196, 196);">
+        <nav class="navbar navbar-dark nav-custom li-text  bottom-marg navbar-expand-lg " >
+          <span class="navbar-toggler-icon"> </span>
+              </button>
+                <div class=" li-text collapse navbar-collapse" id="navbarResponive">
+                  <ul class="nav navbar-nav li-text">
+                      <!-- ///*****changing navigational bar from HTML to Ejs */ -->
+                      <%for(var i=0;i<nav.length;i++){%>
+                          <a href="<%=nav[i].link%>"> <%=nav[i].title%>&nbsp;&nbsp;&nbsp;</a>  
+                       <%}%> 
+                  </ul>
+                </div>
+                </nav>
+                <tr>
+                <div class="head-under " >
+                        <h1 class="lib-text"><%=title%></h1>
+                       
+                </div>
+                <div class="card-continer continer" id="card-cont">
+                
+                    <%for(var i=0;i<authors.length;i++){%>
+
+                    <div class="card-content ">
+
+                          <img src="/images/authors/<%=authors[i].image%>"  width="100px" height="100px">
+                          <p class="book-heading">Author Name&nbsp;&nbsp;<%=authors[i].name%></p>
+                          <p class="book-details">Author Genere&nbsp;&nbsp;<%=authors[i].genre%></p>
+                          <p class="book-details">Author Era&nbsp;&nbsp;<%=authors[i].era%></p>
+                          <!-- <p class="book-details">Author Description&nbsp;&nbsp;<%=authors[i].description%></p> -->
+                          <p class="book-details">Author Country&nbsp;&nbsp;<%=authors[i].country%></p>
+                          <div>
+                              <p><a href="/authors/<%=i%>"> ReadMore</a></p>
+                          </div>
+                    </div>
+                    <%}%>
+                </div>
