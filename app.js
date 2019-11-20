@@ -34,7 +34,7 @@ app.use('/authors',authorsRouter);
 app.use('/signup', signupRouter);
 app.use('/login',loginRouter);
 
-mongoose.connect("mongodb://localhost:27017/AddBookLib")
+mongoose.connect("mongodb+srv://arjunfender:<guitararjun@123>@cluster0-nvh7s.mongodb.net/test?retryWrites=true&w=majority"")
 
 
 app.set('views','./src/views');//changing view engine html to Ejs format ,in Rendering format into app set,and app get
@@ -60,8 +60,9 @@ app.get('/', function(req,res){
 //     res.send("sendeddd");
 // })
 
-app.listen(3000, function(){
-    console.log('listening the port number 3000'+chalk.green('3000'));
-});                             //setting the port&callback function for running server and showing some message
-
+// app.listen(3000, function(){
+//     console.log('listening the port number 3000'+chalk.green('3000'));
+// });                             //setting the port&callback function for running server and showing some message
+app.listen(process.env.PORT||4000,()=>{
+    console.log("listening to port "+chalk.green('process.env.PORT||4000') 
 //****installing new package chalk usgin sudo install command in terminal */
