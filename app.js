@@ -34,7 +34,7 @@ app.use('/authors',authorsRouter);
 app.use('/signup', signupRouter);
 app.use('/login',loginRouter);
 
-mongoose.connect("mongodb+srv://arjunfender:<guitararjun@123>@cluster0-nvh7s.mongodb.net/test?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://arjunfender:<guitarguitar>@cluster0-nvh7s.mongodb.net/test?retryWrites=true&w=majority")
 
 
 app.set('views','./src/views');//changing view engine html to Ejs format ,in Rendering format into app set,and app get
