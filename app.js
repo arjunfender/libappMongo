@@ -64,5 +64,6 @@ app.get('/', function(req,res){
 //     console.log('listening the port number 3000'+chalk.green('3000'));
 // });                             //setting the port&callback function for running server and showing some message
 app.listen(process.env.PORT||4000,()=>{
-    console.log("listening to port "+chalk.green('process.env.PORT||4000') 
+    console.log("listening to port "+chalk.green('process.env.PORT||4000')); 
 //****installing new package chalk usgin sudo install command in terminal */
+});
